@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Jokes</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./img/blobs/blob_6.svg" type="image/x-icon">
+
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+    <div class="container-page">
+
+        <main class="container">
+            <!-- **************** -->
+            <!-- Backgrounds -->
+            <!-- **************** -->
+            <div class="bg-main bg-light"></div>
+            <div class="bg-blob blob-center"></div>
+            <div class="bg-blob blob-top-right"></div>
+            <div class="bg-blob blob-bottom-left"></div>
+
+            <!-- **************** -->
+            <!-- Show Weather API -->
+            <!-- **************** -->
+
+            <div id="weather-container">
+                <img id="iconWeather" src="">
+                <p href="#" id="weather">Avui: parcialment ennuvolat</p>
+            </div>
+
+            <!-- **************** -->
+            <!-- WEB PAGE JOKE CONTENT -->
+            <!-- **************** -->
+
+            <div class="container-jokes">
+                <h1>Preparat per riure? &#129315; </h1>
+
+                <p id="jokeText" class="d-none">Texto chiste.</p>
+                <!-- ************* -->
+                <!-- Score Buttons -->
+                <!-- ************* -->
+                <div id="btns-scores" class="btn-group">
+                    <button type="button" class="btn-score " onclick="getScore(1)">
+                        <img class="emoji-face d-none" src="./img/btns-score/emoji-frown.svg">
+                    </button>
+                    <button type="button" class="btn-score" onclick="getScore(2)">
+                        <img class="emoji-face d-none" src="./img/btns-score/emoji-expressionless.svg">
+                    </button>
+                    <button type="button" class="btn-score" onclick="getScore(3)">
+                        <img class="emoji-face d-none" src="./img/btns-score/emoji-laughing.svg">
+                    </button>
+                </div>
+                <!-- **************** -->
+                <!-- Next Joke Button -->
+                <!-- **************** -->
+                <div class="btnNext-bg">
+                    <button type="button" id="btnNext" class="btnNext" onclick="getJoke()">Començar</button>
+                </div>
+
+            </div>
+    </div>
+
+    </main>
+    </div>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

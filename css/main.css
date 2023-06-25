@@ -1,0 +1,285 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow: hidden;
+    max-width: 100vw;
+}
+
+.d-none {
+    display: none;
+}
+
+/* ****************/
+/* Backgrounds  */
+/* ****************/
+.bg-main {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../img/priscilla-du-preez-XkKCui44iM0-unsplash.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+    opacity: 0.7;
+}
+
+/* blobs */
+.blob-center {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -2;
+    opacity: 1;
+    background-image: url(../img/blobs/blob_3.svg);
+    background-position: center;
+    background-size: cover 90%;
+    background-repeat: no-repeat;
+    transform: scale(1.5, 1.2);
+}
+
+.blob-top-right {
+    display: none;
+    width: 50vw;
+    height: 50vh;
+    z-index: -1;
+    top: 20%;
+    left: 88%;
+    background-image: url(../img/blobs/blob_2.svg);
+    position: absolute;
+    transform: translate(-50%, -50%);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover 30%;
+}
+
+.blob-bottom-left {
+    display: none;
+    width: 40vw;
+    height: 40vh;
+    top: 80%;
+    left: 12%;
+    z-index: -1;
+    background-image: url(../img/blobs/blob_1.svg);
+    position: absolute;
+    transform: translate(-50%, -50%);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover 35%;
+}
+
+/* ******************/
+/* Show Weather API */
+/* ******************/
+#weather-container {
+    display: flex;
+    width: 100vw;
+    height: 10vh;
+    z-index: 5;
+    align-items: center
+}
+
+#weather-container img {
+    margin: 0 0.5rem 0 1rem;
+    height: 9vh;
+}
+
+#weather-container p {
+    display: flex;
+    padding: 0 1rem;
+    border-left: solid 3px black;
+    font-size: 1.3rem;
+    height: 5vh;
+    align-items: center;
+}
+
+/* ******************/
+/* WEB PAGE CONTENT */
+/* ******************/
+
+.container-jokes {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 50vw;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 1rem;
+    background-color: white;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.container-jokes h1 {
+    margin-top: 2rem;
+}
+
+#jokeText {
+    font-size: 1.2rem;
+    margin: 2rem;
+    padding: 1rem;
+}
+
+/* ******************/
+/* Score Buttons    */
+/* ******************/
+.btn-group {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2rem;
+}
+
+.btn-score {
+    position: relative;
+    border: none;
+    font-size: 3.5rem;
+    cursor: pointer;
+    margin: 1rem;
+    transform: translate(-.5rem, -.2rem)
+}
+
+.emoji-face {
+    position: absolute;
+    top: -5%;
+    left: -5%;
+    border-radius: 50%;
+    transform: scale(2);
+    font-size: 3.5rem;
+    background-color: #ffd61f;
+}
+
+.emoji-face:hover {
+    background-color: #f86029;
+    transform: scale(2.5)
+}
+
+/* ******************/
+/* Next Joke Button */
+/* ******************/
+
+.btnNext-bg {
+    position: relative;
+    width: 10rem;
+    height: 3rem;
+    border-radius: 3rem;
+    margin: 2rem;
+    background-color: #ffd61f;
+}
+
+.btnNext {
+    position: absolute;
+    top: -9%;
+    left: -4%;
+    width: 10rem;
+    height: 3rem;
+    border-radius: 3rem;
+    background-color: transparent;
+    border: .2rem solid #000;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.btnNext:hover {
+    font-size: 1.3rem;
+    top: 0%;
+    left: 0%;
+}
+
+/* *************************/
+/* MEDIA QUERIES           */
+/* *************************/
+
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) {
+
+    /* ****************/
+    /* Backgrounds  */
+    /* ****************/
+    .blob-center {
+        background-size: cover 90%;
+        transform: scale(1.7, 1.7);
+    }
+
+    .blob-top-right {
+        width: 55vw;
+        height: 55vh;
+        top: 12%;
+        left: 88%;
+        transform: translate(-50%, -50%);
+        background-size: cover 40%;
+    }
+
+    .blob-bottom-left {
+
+        width: 60vw;
+        height: 60vh;
+        top: 88%;
+        left: 25%;
+        transform: translate(-50%, -50%);
+        background-size: cover 35%;
+    }
+
+
+    /* ******************/
+    /* WEB PAGE CONTENT */
+    /* ******************/
+
+    .container-jokes {
+        width: 80vw;
+    }
+
+    .container-jokes h1 {
+        margin: 2rem 1rem;
+    }
+}
+
+
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 768px) {
+
+    /* ******************/
+    /* WEB PAGE CONTENT */
+    /* ******************/
+
+    .container-jokes {
+        width: 80vw;
+    }
+    .container-jokes h1 {
+        margin: 2rem 1rem;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+/* @media (min-width: 992px) { ... } */
+
+/* X-Large devices (large desktops, 1200px and up) */
+/* @media (min-width: 1200px) { ... } */
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) { 
+
+    /* ******************/
+    /* WEB PAGE CONTENT */
+    /* ******************/
+
+    .container-jokes {
+        width: 30vw;
+    }
+ }
